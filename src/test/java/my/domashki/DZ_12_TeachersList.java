@@ -1,4 +1,4 @@
-package my.test;
+package my.domashki;
 import Util.util;
 import config.Baseclass;
 import org.junit.Test;
@@ -19,11 +19,6 @@ public class DZ_12_TeachersList extends Baseclass {
         driver.get(mainLink);
         driver.findElement(coursesOpen).click();
         driver.findElement(programuvannya).click();
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         driver.findElement(frontEndBasic).click();
 
         util.scrollToElementVisibilityOf(driver, By.className("coach-card_name"));
@@ -35,4 +30,3 @@ public class DZ_12_TeachersList extends Baseclass {
         }
     }
 }
-
