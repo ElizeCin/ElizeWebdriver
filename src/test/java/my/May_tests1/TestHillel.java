@@ -1,9 +1,10 @@
-package config;
+package my.May_tests1;
 
+import config.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TestHillel extends Baseclass{
+public class TestHillel extends Baseclass {
     public static void main(String[] args) {
         driver.get("https://dnipro.ithillel.ua/");
         System.out.println(driver.getTitle());
@@ -16,11 +17,11 @@ public class TestHillel extends Baseclass{
         programming.click();
         System.out.println(driver.findElement(By.className("section-content_descriptor")).getText());
 
-//        System.out.println(driver.getPageSource());
-//        driver.manage().window();
-//        System.out.println(driver.findElement(By.id("btn-consultation-hero")).getText());
+        System.out.println(driver.getPageSource());
+        driver.manage().window();
+        System.out.println(driver.findElement(By.id("btn-consultation-hero")).getText());
 //        WebElement consultButton = driver.findElement(By.id("btn-consultation-hero"));
-//        System.out.println(driver.findElement(By.className("section-content_description")).getText());
+        System.out.println(driver.findElement(By.className("section-content_description")).getText());
 
         try {
             Thread.sleep(3000);

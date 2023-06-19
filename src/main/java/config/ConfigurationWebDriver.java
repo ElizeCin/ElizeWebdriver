@@ -1,15 +1,12 @@
 package config;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.time.Duration;
 
 import static config.Baseclass.driver;
-import static config.WebDriversEnum.CHROME;
-import static config.WebDriversEnum.CHROME_INCOGNITO;
-import static org.openqa.selenium.remote.Browser.FIREFOX;
 
 public class ConfigurationWebDriver {
     static public WebDriver createDriver(WebDriversEnum webDrivers) {
@@ -25,7 +22,7 @@ public class ConfigurationWebDriver {
         options.addArguments("--start-maximized");
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
     private static void createChrome() {
